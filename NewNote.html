@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>STUDY NOTE</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!--[if lte IE 8]>
+    <script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.4.7/basic/ckeditor.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/MyJS.js"></script>
+    <script src="js/run_prettify.js"></script>
+    <script src="js/lang-css.js"></script>
+    <script src="js/jquery.prettify.min.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-desktop.css"/>
+    <link rel="stylesheet" href="css/style-mobile.css"/>
+    <link rel="stylesheet" href="css/style-1000px.css"/>
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
+    <script src="js/MyStyle.js"></script>
+
+</head>
+<body class="right-sidebar" ng-app="myapp">
+<!-- Header -->
+<div id="header-wrapper" class="wrapper">
+    <div id="header">
+        <!-- Logo -->
+        <div id="logo">
+            <h1><a href="index.html">Create your own note</a></h1>
+
+            <p>Share your own experience with everyone!!</p>
+        </div>
+        <!-- Nav -->
+        <div ng-controller="MainCtrl">
+            <menu-view></menu-view>
+        </div>
+    </div>
+</div>
+<!-- Main -->
+<div class="wrapper style2">
+    <div class="title">New Notes</div>
+    <div id="main" class="container">
+        <div class="row 150%">
+            <div class="8u" id="MainContent2">
+                <!-- Content -->
+                <div id="content">
+                    <section>
+                        <form>
+                            <div class="newNoteTitle">
+                                <label class="newNotelabel"> Title </label>
+                                <input id="newNoteInput" type="text">
+                            </div>
+                            <div ng-controller="ShowCategory" class="newNoteTitle">
+                                <label class="newNotelabel">Categary</label>
+                                <select ng-init="Category = items[0]" ng-model="Category"
+                                        ng-options="item as item.text for item in items"
+                                        class="newNoteSelector">
+                                </select>
+
+                                <div class="newNoteTitle">
+                                    <label class="newNotelabel">Sub Categary</label>
+                                    <select ng-show="Category.text == items[0].text ||Category.text == items[3].text "
+                                            class="newNoteSelector">
+                                    </select>
+                                    <select ng-init="SubCategory = SubItems[0]" ng-model="SubCategory"
+                                            ng-options="SubItem as SubItem.text for SubItem in SubItems"
+                                            ng-show="Category.text == 'JACASCRIPT'" class="newNoteSelector">
+                                    </select>
+                                    <select ng-init="SubnetCategory = SubNets[0]" ng-model="SubnetCategory"
+                                            ng-options="SubNet as SubNet.text for SubNet in SubNets"
+                                            ng-show="Category.text == '.NET'" class="newNoteSelector">
+                                    </select>
+                                </div>
+                                <div id="newNoteText">
+                            <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
+                            </textarea>
+                                </div>
+                                <button id="newNoteButton" type="button">Submit!</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Highlights -->
+<div ng-controller="MainCtrl">
+    <suggest-section></suggest-section>
+    <footer-view></footer-view>
+</div>
+
+</body>
+</html>

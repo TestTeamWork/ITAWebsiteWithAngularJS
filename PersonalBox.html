@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>STUDY NOTE</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!--[if lte IE 8]>
+    <script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/MyJS.js"></script>
+    <script src="js/run_prettify.js"></script>
+    <script src="js/lang-css.js"></script>
+    <script src="js/jquery.prettify.min.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-desktop.css"/>
+    <link rel="stylesheet" href="css/style-mobile.css"/>
+    <link rel="stylesheet" href="css/style-1000px.css"/>
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
+</head>
+<body class="right-sidebar" ng-app="myapp">
+<!-- Header -->
+<div id="header-wrapper" class="wrapper">
+    <div id="header">
+        <!-- Logo -->
+        <div id="logo">
+            <h1><a href="index.html">Create your own note</a></h1>
+            <p>Share your own experience with everyone!!</p>
+        </div>
+        <!-- Nav -->
+        <div ng-controller="MainCtrl">
+            <menu-view></menu-view>
+        </div>
+    </div>
+</div>
+<!-- Main -->
+<div class="wrapper style2">
+    <div class="title">Personal Box</div>
+    <div id="main" class="container">
+        <div class="row 150%">
+            <div class="8u" id="MainContent2">
+                <!-- Content -->
+                <div id="content">
+                    <section id="personSection">
+                        <div class="MainTitle">
+                            <h3>Profile</h3></div>
+                        <div id="profilePhoto" class="personalInfo">
+                            <img src="images/pic08.jpg">
+                            <div class="editPhoto"> Edit my photo</div>
+                        </div>
+                        <div id="" class="personalInfo">
+                            <p>Name:        <span>Zhihui Yan</span></p>
+                            <p>Account:     <span> yacney123456789</span></p>
+                            <p>Follower:    <span> 0</span> </p>
+                            <p>Following:   <span> 0</span></p>
+                           <br>
+                            <div class="editPhoto" style=" margin-top: 5px;"><a href="NewNote.html"> New Note</a></div>
+                        </div>
+                    </section>
+                    <!--section for HTML/CSS -->
+                    <section id="MyNotesSection">
+                        <div class="MainTitle">
+                            <h3>My Notes</h3></div>
+                        <div class="MainList">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+
+                            </ul>
+                        </div>
+                    </section>
+                    <hr>
+                    <section id="MyMessagesSection">
+                        <div class="MainTitle">
+                            <h3>My Messages</h3></div>
+                        <div class="MainList">
+                            <ul>
+                                <li><a><span class="MainListTitle">Your note is very helpful</span></a>
+                                    <span class="MainListRest">Yancey</span>
+                                    <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">Thank you for your excellent solution but I got
+                                    another alternative solution </span></a>
+                                    <span class="MainListRest">Yancey</span>
+                                    <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a>
+                                    <span class="MainListRest">Yancey</span>
+                                    <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Highlights -->
+<div ng-controller="MainCtrl">
+    <suggest-section></suggest-section>
+    <footer-view></footer-view>
+</div>
+
+</body>
+</html>

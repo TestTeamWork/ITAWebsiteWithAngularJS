@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>STUDY NOTE</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!--[if lte IE 8]>
+    <script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/MyJS.js"></script>
+    <script src="js/run_prettify.js"></script>
+    <script src="js/lang-css.js"></script>
+    <script src="js/jquery.prettify.min.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-desktop.css"/>
+    <link rel="stylesheet" href="css/style-mobile.css"/>
+    <link rel="stylesheet" href="css/style-1000px.css"/>
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
+    <script src="js/MyStyle.js"></script>aaaaaaaaaaaa
+</head>
+<body class="no-sidebar" ng-app="myapp">
+<!-- Header -->
+<div id="header-wrapper" class="wrapper">
+    <div id="header">
+        <!-- Logo -->
+        <div id="logo">
+            <h1><a href="index.html">AngularJS</a></h1>
+
+            <p>AngularJS lets you extend HTML vocabulary for your application.</p>
+
+            <p> The resulting environment is extraordinarily expressive, readable, and quick to develop.</p>
+        </div>
+        <!-- Nav -->
+        <div ng-controller="MainCtrl">
+            <menu-view></menu-view>
+        </div>
+    </div>
+</div>
+<!-- Main -->
+<div class="wrapper style2">
+    <div class="title" style="margin-left: -12.5em">NOTES</div>
+    <div id="main" class="container">
+        <!--SubNav -->
+        <div class="SubNav">
+            <ul>
+                <li><a hre="index.html"><span class="SubNavTitle">Home</span></a> &nbsp >></li>
+                <li><a><span class="SubNavTitle">Javascript</span></a> &nbsp >></li>
+                <li><a ><span class="SubNavTitle">AngularJS</span></a> &nbsp >></li>
+                <li><a href="AngularJSNote.html"><span class="SubNavTitle">Read file with AngularJS</span></a></li>
+            </ul>
+        </div>
+        <!--end of SubNav -->
+        <!-- Content -->
+        <div id="content">
+            <article class="box post">
+                <header class="style1">
+                    <h2><br class="mobile-hide"/>Read file with AngularJS</h2>
+
+                    <p>Friday, March 20, 2015</p>
+                </header>
+                <div ng-controller="MainCtrl" class="container">
+                    <p>LIVE</p>
+
+                    <h1>Select text file</h1>
+                    <input type="file" on-read-file="showContent($fileContent)"/>
+
+                    <div ng-if="content">
+                        <h2>File content is:</h2>
+                        <pre style="margin-right: 30px">{{ content }}</pre>
+                    </div>
+                </div>
+                <br class="mobile-hide"/>
+
+                <p>You can see the fully working example in <a
+                        href="http://jsfiddle.net/alexsuch/6aG4x/">jsfiddle</a></p>
+
+                <p>Our example’s HTML code will be so short. In consists of an input type="file" element.
+                    When the content of the file has been read, the "showContent" method of the controller
+                    "MainCtrl" shall be called.</p>
+
+                    <pre class="prettyprint lang-html linenums">
+                    &lt;div ng-controller="MainCtrl" class="container"&gt;
+                        &lt;h1&gt;Select text file&lt;/h1&gt;
+                        &lt;input type="file" on-read-file="showContent($fileContent)"/&gt;
+                        &lt;div&gt;
+                            &lt;h2&gt;File content is:&lt;/h2&gt;
+                            &lt;pre&gt;&#123;&nbsp;{ content }&nbsp;&#125;&lt;/pre&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    </pre>
+
+                <br class="mobile-hide"/>
+
+                <p>This "showContent" function only gets the file content as a parameter, and sends it to the view.</p>
+               <pre class="prettyprint linenums">
+                    myapp.controller('MainCtrl', function ($scope) {
+                        $scope.showContent = function ($fileContent) {
+                            $scope.content = $fileContent;
+                        };
+                    });
+                </pre>
+                <br class="mobile-hide"/>
+
+                <p>Now is the directive. As you will see, the code isn’t so large. Its restrict value is A, because it’s
+                    going to be an attribute.</p>
+                <pre class="prettyprint linenums">
+                    myapp.directive('onReadFile', function ($parse) {
+                        return {
+                            restrict: 'A',
+                            scope: false,
+                            link: function (scope, element, attrs) {
+                                var fn = $parse(attrs.onReadFile);
+                                element.on('change', function (onChangeEvent) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (onLoadEvent) {
+                                        scope.$apply(function () {
+                                            fn(scope, {$fileContent: onLoadEvent.target.result});
+                                        });
+                                    };
+                                    reader.readAsText((onChangeEvent.srcElement || onChangeEvent.target).files[0]);
+                                });
+                            }
+                        };
+                    });
+               </pre>
+                <br class="mobile-hide"/>
+
+                <p>On the directive, we use the "$parse" method, this allows parameter "attrs.onReadFile" to be passed,
+                    and thus identify the function to be called
+                    (showContent($fileContent) in the example).<br>
+                    When it’s called, that function needs two arguments:<br>
+                    1. A context. In our case will be the scope. With this, we are saying: call the
+                    showContent($fileContent) function of the scope.<br>
+                    2. A JSON object which content will replace the variables that has the same name on the context.
+                    This
+                    way we will be able to override the values of the function arguments.
+                    <br>This directive could be so useful in applications where we want to perform a data load, whatever
+                    the reason is: a CSV client data, load a saved game, etc.</p>
+                <br class="mobile-hide"/><br class="mobile-hide"/>
+            </article>
+            <form name="reviewForm" id="reviewForm"
+                  ng-submit="reviewForm.$valid && ReviewController.addReview()" novalidate>
+                <!--  Review Form -->
+                <h4>Submit a Review</h4>
+                <fieldset class="form-group">
+                    <textarea ng-model="review.body" class="form-control"
+                              placeholder="Write a short review of the product..." title="Review"
+                              required></textarea>
+                </fieldset>
+                <fieldset class="form-group">
+                    <input ng-model="review.author" type="email" class="form-control"
+                           placeholder="jimmyDean@example.org" title="Email" required/>
+                </fieldset>
+                <fieldset class="form-group">
+                    <input type="submit" class="btn btn-primary pull-right" value="Submit Review"/>
+                </fieldset>
+                <!--  Live Preview -->
+                <blockquote ng-show="review">
+                    {{review.body}}
+                    <cite class="clearfix">—{{review.author}}</cite>
+                </blockquote>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Highlights -->
+<div ng-controller="MainCtrl">
+    <suggest-section></suggest-section>
+    <footer-view></footer-view>
+</div>
+</body>
+</html>

@@ -1,0 +1,400 @@
+/*
+	Escape Velocity by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+@media (min-width:800px) {  #navbar > ul{  padding: 0 2.8em;  }  }
+@media (min-width:810px) {  #navbar > ul{  padding: 0 3.4em;  }  }
+@media (min-width:820px) {  #navbar > ul{  padding: 0 3.9em;  }  }
+@media (min-width:830px) {  #navbar > ul{  padding: 0 4.3em;  }  }
+@media (min-width:850px) {  #navbar > ul{  padding: 0 5.1em;  }  }
+@media (min-width:890px) {  #navbar > ul{  padding: 0 6.6em;  }  }
+@media (min-width:930px) {  #navbar > ul{  padding: 0 8.1em;  }  }
+@media (min-width:970px) {  #navbar > ul{  padding: 0 9.6em;  }  }
+@media (min-width:1000px) {  #navbar > ul{  padding: 0 10.7em;  }  }
+@media (min-width:1030px) {  #navbar > ul{  padding: 0 11.8em;  }  }
+@media (min-width:1060px) {  #navbar > ul{  padding: 0 12.9em;  }  }
+@media (min-width:1090px) {  #navbar > ul{  padding: 0 14.0em;  }  }
+@media (min-width:1110px) {  #navbar > ul{  padding: 0 14.8em;  }  }
+@media (min-width:1140px) {  #navbar > ul{  padding: 0 15.9em;  }  }
+@media (min-width:1170px) {  #navbar > ul{  padding: 0 17em;  }  }
+@media (min-width:1200px) {  #navbar > ul{  padding: 0 17.8em;  }  }
+@media (min-width:1230px) {  #navbar > ul{  padding: 0 18.9em;  }  }
+@media (min-width:1250px) {  #navbar > ul{  padding: 0 20.1em;  }  }
+@media (min-width:1270px) {  #navbar > ul{  padding: 0 20.9em;  }  }
+@media (min-width:1300px) {  #navbar > ul{  padding: 0 21.9em;  }  }
+@media (min-width:1330px) {  #navbar > ul{  padding: 0 23.1em;  }  }
+@media (min-width:1360px) {  #navbar > ul{  padding: 0 24.2em;  }  }
+@media (min-width:1390px) {  #navbar > ul{  padding: 0 25.3em;  }  }
+@media (min-width:1420px) {  #navbar > ul{  padding: 0 26.4em;  }  }
+@media (min-width:1450px) {  #navbar > ul{  padding: 0 27.6em;  }  }
+@media (min-width:1480px) {  #navbar > ul{  padding: 0 28.7em;  }  }
+@media (min-width:1510px) {  #navbar > ul{  padding: 0 29.8em;  }  }
+@media (min-width:1540px) {  #navbar > ul{  padding: 0 31em;  }  }
+@media (min-width:1570px) {  #navbar > ul{  padding: 0 32.1em;  }  }
+@media (min-width:1600px) {  #navbar > ul{  padding: 0 33.2em;  }  }
+@media (min-width:1630px) {  #navbar > ul{  padding: 0 34.3em;  }  }
+@media (min-width:1670px) {  #navbar > ul{  padding: 0 35.9em;  }  }
+@media (min-width:1700px) {  #navbar > ul{  padding: 0 36.9em;  }  }
+@media (min-width:1730px) {  #navbar > ul{  padding: 0 38.1em;  }  }
+@media (min-width:1760px) {  #navbar > ul{  padding: 0 39.2em;  }  }
+@media (min-width:1790px) {  #navbar > ul{  padding: 0 40.4em;  }  }
+@media (min-width:1810px) {  #navbar > ul{  padding: 0 41.1em;  }  }
+@media (min-width:1840px) {  #navbar > ul{  padding: 0 42.2em;  }  }
+@media (min-width:1860px) {  #navbar > ul{  padding: 0 42.9em;  }  }
+@media (min-width:1890px) {  #navbar > ul{  padding: 0 44.1em;  }  }
+@media (min-width:1910px) {  #navbar > ul{  padding: 0 44.8em;  }  }
+@media (min-width:1940px) {  #navbar > ul{  padding: 0 46.4em;  }  }
+
+@media (min-width: 768px) {
+    body, input, select, textarea {
+        line-height: 25px;
+        font-size: 10pt;
+        letter-spacing: 0;
+    }
+
+    #logo {
+        position: absolute;
+        /* height: 5em; */
+        /* top: 50%; */
+        /* left: 0; */
+        width: 100%;
+        text-align: center;
+        margin-top: -0.5em;
+    }
+
+    #logo h1 {
+        font-size: 2em;
+        letter-spacing: 0.25em;
+    }
+
+    #logo p {
+        margin: 1.25em 0 0 0;
+        display: block;
+        letter-spacing: 0.2em;
+        font-size: 1em;
+    }
+
+    .navbar-nav {
+        position: absolute;
+        top: 2.5em;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        border-radius: 0.35em;
+        /*box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);*/
+        padding: 0 1.5em 0 1.5em;
+    }
+    #navbar > ul > li:hover > ul {
+        display: block;
+        width: 114px;
+        left: 0px;
+    }
+    #navbar > ul > li >ul >li:hover >ul{
+        display: block;
+    }
+
+    #navbar > ul > li > ul {
+        display: none;
+        padding-left: 5px;
+        background: #222835 url('images/overlay.png');
+        background-color: rgba(44,50,63,0.925);
+        padding: 1.5em 1em 1.5em 1em;
+        border-radius: 0.35em;
+        box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.25);
+        min-width: 8em;
+        text-align: left;
+        line-height: 38px;
+        margin-top: 5px;
+    }
+    #dropdownMenu{
+        display: none;
+        margin-left: 80px;
+        margin-top: -50px;
+        background: #222835 url('images/overlay.png');
+        background-color: rgba(44,50,63,0.925);
+    }
+    #dropdownMenu1{
+        display: none;
+        margin-left: 80px;
+        margin-top: -50px;
+        background: #222835 url('images/overlay.png');
+        background-color: rgba(44,50,63,0.925);
+    }
+    #dropdownMenu1 a{
+        color: rgba(255, 255, 255, 0.75);
+    }
+    #dropdownMenu a{
+        color: rgba(255, 255, 255, 0.75);
+    }
+    #navbar > ul > li > ul > li > a {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .navbar-fixed-top {
+        position: relative !important;
+        margin-top: -170px;
+
+    }
+
+    #navbar > ul {
+        display: inline-block;
+        border-radius: 0.35em;
+        /*box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);*/
+        width: 100%;
+
+    }
+    .navbar .navbar-collapse {
+        text-align: center !important;
+    }
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+    #navbar > ul > li {
+        display: inline-block;
+        text-align: center;
+        padding: 0 0.7em 0 1.5em;
+    }
+
+    #navbar > ul > li > a,
+    #navbar > ul > li > span {
+        display: block;
+        color: #eee;
+        color: rgba(255, 255, 255, 0.75);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.8em;
+        letter-spacing: 0.25em;
+        height: 5em;
+        line-height: 5em;
+        -moz-transition: all .25s ease-in-out;
+        -webkit-transition: all .25s ease-in-out;
+        -o-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        outline: 0;
+        padding-top: 0px;
+    }
+
+    .navbar-nav > ul > li:hover > a,
+    .navbar-nav > ul > li.active > a,
+    .navbar-nav > ul > li.active > span {
+        color: #fff;
+    }
+
+    .subNav li {
+        list-style-type: none;
+    }
+    #MainContent{
+        max-width: 693px;
+        margin-left: -20px;
+        float: left;
+    }
+    #subContent{
+        max-width: 330px;
+        float: left;
+        margin-left: 41px;
+    }
+    #MainContent2{
+        /*max-width: 693px;*/
+    }
+    .box h2{
+        margin: 0 0 0.75em 0;
+        font-size: 1.15em;
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+    .personalInfo{
+        float: left;
+        margin-left: 68px;
+        margin-bottom: 20px;
+        margin-top: 25px;
+    }
+    /*********************************************************************************/
+    /* Wrappers                                                                      */
+    /*********************************************************************************/
+    .wrapper {
+        padding: 4em 0 7em 0;
+    }
+
+    #intro-wrapper {
+        padding-bottom: 7em;
+    }
+
+    #footer-wrapper {
+    }
+
+    #footer-wrapper hr {
+        margin: 3em 0 3em 0;
+    }
+    .wrapper .title {
+        width: 25em;
+        height: 3.25em;
+        top: -3.25em;
+        line-height: 3.25em;
+        margin-bottom: -3.25em;
+        margin-left: -10.5em;
+        padding-top: 0.5em;
+    }
+    #intro {
+        text-align: center;
+    }
+    #intro > .style1 {
+        font-size: 1.5em;
+        letter-spacing: 0.075em;
+    }
+    #intro > .style2 {
+        font-size: 2.75em;
+        letter-spacing: 0.075em;
+        line-height: 1.35em;
+        padding: 1em 0 1em 0;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    #intro > .style3 {
+        font-size: 1.4em;
+        width: 48em;
+        margin: 2em auto;
+    }
+    ul.actions {
+        margin: 3em 0 0 0;
+    }
+    ul.actions li:first-child {
+        margin-left: 0;
+    }
+    ul.actions li:last-child {
+        margin-right: 0;
+    }
+    ul.actions li {
+        display: inline-block;
+        margin: 0 0.75em 0 0.75em;
+    }
+    input[type="button"].big, input[type="submit"].big, input[type="reset"].big, .button.big {
+        font-size: 1.2em;
+        min-width: 14em;
+    }
+    input[type="button"], input[type="submit"], input[type="reset"], .button {
+        padding: 0 2.25em 0 2.25em;
+        font-size: 0.9em;
+        min-width: 12em;
+        height: 4em;
+        line-height: 4em;
+    }
+
+    section, article {
+        margin: 0 0 8em 0;
+    }
+    #footer-wrapper form{
+        margin-left: 25%;
+    }
+
+    /*********************************************************************************/
+    /* Highlights                                                                    */
+    /*********************************************************************************/
+    #highlights {
+    }
+
+    #highlights .highlight {
+    }
+
+    #highlights .highlight h3 {
+        margin: 0 0 0.75em 0;
+        font-size: 1.15em;
+        letter-spacing: 0.05em;
+    }
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000px;
+    }
+    .u6{
+        margin-bottom: 10px;
+        float: left;
+        margin-right: 50px;
+        width: 249px;
+    }
+    #row2{
+        display: inline-flex;
+    }
+    #contact-name, #contact-email{
+        width: 200px;
+    }
+    #contact-message{
+        width: 500px;
+    }
+    .u6 h3{
+        margin: auto;
+        width: 50%;
+    }
+    .u6 p{
+        margin: auto;
+        width: 50%;
+    }
+    .u4{
+        width: 280px;
+        margin: 10px 25px;
+        float: left;
+    }
+    .u4:first-child{
+        margin-left: 26px;
+    }
+    .u4 p{
+        font-size: 1.3em;
+    }
+    .formButton{
+        list-style-type: none;
+        display: inline-flex;
+    }
+    .formButton li{
+        float: left;
+        margin-right: 51px;
+        margin-top: 23px;
+    }
+
+    #footer-wrapper .feature-list h3{
+        width: 200px;
+    }
+    }
+#row1{
+    margin-left: 10%;
+    }
+
+    /*********************************************************************************/
+    /* Header                                                                        */
+    /*********************************************************************************/
+    #header {
+        padding: 10em 0;
+    }
+
+    .homepage #header {
+        padding: 14em 0;
+    }
+
+    /*********************************************************************************/
+    /* Logo                                                                          */
+    /*********************************************************************************/
+    #logo {
+        margin-top: -0.5em !important;
+    }
+
+    /*********************************************************************************/
+    /* Intro                                                                         */
+    /*********************************************************************************/
+    #intro {
+    }
+    #intro > .style2 {
+        font-size: 2.25em;
+    }
+
+    /*********************************************************************************/
+    /* Copyright                                                                     */
+    /*********************************************************************************/
+    #copyright {
+        margin: 3em 0 0 0;
+    }

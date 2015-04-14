@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>STUDY NOTE</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!--[if lte IE 8]>
+    <script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/MyJS.js"></script>
+    <script src="js/run_prettify.js"></script>
+    <script src="js/lang-css.js"></script>
+    <script src="js/jquery.prettify.min.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-desktop.css"/>
+    <link rel="stylesheet" href="css/style-mobile.css"/>
+    <link rel="stylesheet" href="css/style-1000px.css"/>
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
+</head>
+<body class="right-sidebar"  ng-app="myapp">
+<!-- Header -->
+<div id="header-wrapper" class="wrapper">
+    <div id="header">
+        <!-- Logo -->
+        <div id="logo">
+            <h1><a href="index.html">DISCOVER THE NOTES</a></h1>
+            <p>Try to discovery</p>
+        </div>
+        <!-- Nav -->
+        <div ng-controller="MainCtrl">
+            <menu-view></menu-view>
+        </div>
+    </div>
+</div>
+<!-- Main -->
+<div class="wrapper style2">
+    <div class="title">All Notes</div>
+    <div id="main" class="container">
+        <div class="row 150%">
+            <div class="8u" id="MainContent">
+                <!-- Content -->
+                <div id="content">
+                    <!--section for HTML/CSS -->
+                    <section>
+                        <div class="MainTitle">
+                            <h3>HTML/CSS</h3></div>
+                        <div class="MainList">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+
+                            </ul>
+                        </div>
+                    </section>
+                    <!--section for JAVASCRIPT -->
+                    <section>
+                        <div class="MainTitle">
+                            <h3>JAVASCRIPT</h3></div>
+                        <div>
+                            <div class="SubMainTitle" id="J1">Javascript</div>
+                            <div class="SubMainTitle" id="J2">AngularJS</div>
+                            <div class="SubMainTitle" id="J3">JQuery</div>
+                            <div class="SubMainTitle" id="J4">Ajax</div>
+                            <div class="SubMainTitle" id="J5">Others</div>
+
+                        </div>
+                        <div class="MainList" id="belongToJ1">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in Javascript?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList" id="belongToJ2">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in AngularJS?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is the code doing?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList" id="belongToJ3">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in JQuery?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList" id="belongToJ4">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in Ajax?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!--section for .net -->
+                    <section>
+                        <div class="MainTitle">
+                            <h3>.NET</h3></div>
+                        <div>
+                            <div class="SubMainTitle" id="N1">Asp.netMVC</div>
+                            <div class="SubMainTitle" id="N2">WCF</div>
+                            <div class="SubMainTitle" id="N3">WebAPI</div>
+                            <div class="SubMainTitle" id="N4">Others</div>
+
+                        </div>
+                        <div class="MainList" id="belongToN1">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is Asp.net MVC?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList" id="belongToN2">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is WCF?</span></a> <span class="MainListRest">Yancey</span>
+                                    <span class="MainListRest">2015/03/20</span></li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList" id="belongToN3">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is WebAPI?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList" id="belongToN4">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is in Others?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!--section for PHP -->
+                    <section>
+                        <div class="MainTitle">
+                            <h3>PHP</h3></div>
+
+                        <div class="MainList">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in Javascript?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in AngularJS?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in JQuery?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                        <div class="MainList HideList">
+                            <ul>
+                                <li><a><span class="MainListTitle">What is New in Ajax?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                                <li><a><span class="MainListTitle">What is New in HTML5?</span></a> <span
+                                        class="MainListRest">Yancey</span> <span class="MainListRest">2015/03/20</span>
+                                </li>
+                                <hr/>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="4u" id="subContent">
+                <!-- Sidebar -->
+                <div id="sidebar">
+
+                    <section class="box">
+                        <header>
+                            <h2>Suggested Passages</h2>
+                        </header>
+                        <ul class="style3">
+                            <li><a href="#">Read file with AngularJS</a></li>
+                            <li><a href="#">HTML Animation</a></li>
+                            <li><a href="#">Entity framework tutorial</a></li>
+                            <li><a href="#">MVC tutorial</a></li>
+                            <li><a href="#">Convert to JSON with AngularJS</a></li>
+                            <li><a href="#">Dapibus mi fermentum fusce non</a></li>
+                            <li><a href="#">Arcu laoreet sapien tempus</a></li>
+                            <li><a href="#">Nulla iaculis egestas varius</a></li>
+                            <li><a href="#">Augue massa feugiat quam pretium</a></li>
+                            <li><a href="#">Orci sem vel libero cras nisi odio</a></li>
+                            <li><a href="#">Sed hendrerit massa nam mattis</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Highlights -->
+<div ng-controller="MainCtrl">
+    <suggest-section></suggest-section>
+    <footer-view></footer-view>
+</div>
+
+</body>
+</html>
